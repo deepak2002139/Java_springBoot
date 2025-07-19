@@ -1,2 +1,26 @@
-# Auto detect text files and perform LF normalization
+# Treat all text files as UTF-8
 * text=auto
+
+# Force LF line endings for all text files (especially helpful for cross-platform)
+* text eol=lf
+
+# Binary files – Git should not attempt to diff
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.exe binary
+
+# Specific language settings (optional, based on your tech stack)
+*.java text diff=java
+*.cpp text diff=cpp
+*.py text diff=python
+*.js text diff=javascript
+*.html text
+*.css text
+
+# Prevent merge conflicts in lock files
+package-lock.json merge=union
+yarn.lock merge=union
